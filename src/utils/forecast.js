@@ -12,7 +12,8 @@ const forecast = function(latitude, longitude, callback){
         else {
             currentleWeather = body.current
             callback( undefined, 'It is currently ' +currentleWeather['temperature'] + 
-            'C and there is a ' + currentleWeather['precip'] + '% chance of rain')
+            'C and there is a ' + currentleWeather['precip'] + '% chance of rain. The weather condition is '
+            +currentleWeather['weather_descriptions'])
         }
     })
 }
